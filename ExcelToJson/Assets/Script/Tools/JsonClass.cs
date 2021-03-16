@@ -15,9 +15,19 @@ public enum JsonKeyType
 
 public class ConfigDefine
 {
-
-
+	public static string ItemInfo = "ItemInfo";
 }
+
+
+public class ItemInfoConfig : Config<ItemInfoConfig>
+{
+	public string Name;
+	public int Type;
+	public int[] Funs;
+	public string[] Values;
+	public ItemInfoConfig() : base(ConfigDefine.ItemInfo,JsonKeyType.STRING) { }
+}
+
 
 
 
